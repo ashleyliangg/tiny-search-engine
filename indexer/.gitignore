@@ -1,0 +1,8 @@
+*.o
+*sorted
+*cpy
+*ansr
+indexer
+indextest
+*index
+badfile

@@ -1,0 +1,51 @@
+gcc -Wall -pedantic -std=c11 -ggdb  -I../lib   -c -o indexer.o indexer.c
+gcc -Wall -pedantic -std=c11 -ggdb  -I../lib indexer.o ../common/common.a ../libcs50/libcs50.a -o indexer 
+gcc -Wall -pedantic -std=c11 -ggdb  -I../lib   -c -o indextest.o indextest.c
+gcc -Wall -pedantic -std=c11 -ggdb  -I../lib indextest.o ../common/common.a ../libcs50/libcs50.a -o indextest 
+./testing.sh
+testing arguments
+1. not enough parameters
+./indexer must have 2 arguments: page_directory and index_filename
+exited with non-zero correctly
+2. not directory made with crawler
+./indexer: directory ../libcs50 must be made by crawler
+exited with non-zero correctly
+3. not writable file
+./indexer: directory ../indexer must be made by crawler
+exited with non-zero correctly
+created index from crawler-created directory of letters depth 0
+Comparing sorted index output with sorted example output
+No differences
+create new index from index file and compare
+No differences
+created index from crawler-created directory of letters depth 2
+Comparing sorted index output with sorted example output
+No differences
+create new index from index file and compare
+No differences
+created index from crawler-created directory of letters depth 4
+Comparing sorted index output with sorted example output
+No differences
+create new index from index file and compare
+No differences
+created index from crawler-created directory of letters depth 5
+Comparing sorted index output with sorted example output
+No differences
+create new index from index file and compare
+No differences
+created index from crawler-created directory of wikipedia depth 0
+Comparing sorted index output with sorted example output
+No differences
+create new index from index file and compare
+No differences
+created index from crawler-created directory of wikipedia depth 1
+Comparing sorted index output with sorted example output
+No differences
+create new index from index file and compare
+No differences
+created index from crawler-created directory of wikipedia depth 2
+Comparing sorted index output with sorted example output
+No differences
+create new index from index file and compare
+No differences
+all test cases ran correctly

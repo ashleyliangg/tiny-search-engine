@@ -1,0 +1,95 @@
+./testing.sh
+testing arguments
+1. not enough parameters
+./querier must have 2 arguments: page_directory and index_filename
+exited with non-zero correctly
+2. not directory made with crawler
+./querier: directory ../libcs50 must be made by crawler
+exited with non-zero correctly
+3. not readable file
+./querier: index_file notindexfile must be readable
+exited with non-zero correctly
+testing with letters depth 2
+./fuzzquery: generating 10 queries from 11 words
+Query: breadth and the
+No documents match.
+Query: home or tse tse or algorithm algorithm
+Matches 3 documents (ranked):
+score    3 doc    1: http://cs50tse.cs.dartmouth.edu/tse/letters/index.html
+score    2 doc    2: http://cs50tse.cs.dartmouth.edu/tse/letters/A.html
+score    1 doc    3: http://cs50tse.cs.dartmouth.edu/tse/letters/B.html
+Query: playground playground or algorithm
+Matches 2 documents (ranked):
+score    1 doc    1: http://cs50tse.cs.dartmouth.edu/tse/letters/index.html
+score    1 doc    2: http://cs50tse.cs.dartmouth.edu/tse/letters/A.html
+Query: timestamp search this or algorithm or faraday or search
+Matches 2 documents (ranked):
+score    1 doc    2: http://cs50tse.cs.dartmouth.edu/tse/letters/A.html
+score    1 doc    3: http://cs50tse.cs.dartmouth.edu/tse/letters/B.html
+Query: first or this breadth tse and the or search
+Matches 1 documents (ranked):
+score    2 doc    3: http://cs50tse.cs.dartmouth.edu/tse/letters/B.html
+Query: the algorithm playground this or tse
+Matches 1 documents (ranked):
+score    1 doc    1: http://cs50tse.cs.dartmouth.edu/tse/letters/index.html
+Query: search
+Matches 1 documents (ranked):
+score    1 doc    3: http://cs50tse.cs.dartmouth.edu/tse/letters/B.html
+Query: this tse or search
+Matches 2 documents (ranked):
+score    1 doc    1: http://cs50tse.cs.dartmouth.edu/tse/letters/index.html
+score    1 doc    3: http://cs50tse.cs.dartmouth.edu/tse/letters/B.html
+Query: the
+Matches 1 documents (ranked):
+score    1 doc    1: http://cs50tse.cs.dartmouth.edu/tse/letters/index.html
+Query: for or home or for and tse and for
+Matches 3 documents (ranked):
+score    4 doc    1: http://cs50tse.cs.dartmouth.edu/tse/letters/index.html
+score    2 doc    2: http://cs50tse.cs.dartmouth.edu/tse/letters/A.html
+score    2 doc    3: http://cs50tse.cs.dartmouth.edu/tse/letters/B.html
+testing with toscrapte depth 1
+./fuzzquery: generating 5 queries from 2326 words
+Query: tastiness
+No documents match.
+Query: early maps or mme or mentored or lead whatever
+Matches 2 documents (ranked):
+score    2 doc   16: http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/the-dirty-little-secrets-of-getting-your-dream-job_994/index.html
+score    1 doc   14: http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/the-boys-in-the-boat-nine-americans-and-their-epic-quest-for-gold-at-the-1936-berlin-olympics_992/index.html
+Query: five mais or trove
+Matches 1 documents (ranked):
+score    1 doc   16: http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/the-dirty-little-secrets-of-getting-your-dream-job_994/index.html
+Query: located and loggers foremost extraordinaire
+No documents match.
+Query: luke
+No documents match.
+testing with wikipedia depth 1
+./fuzzquery: generating 5 queries from 6506 words
+Query: dereferencing and charinsert
+Matches 1 documents (ranked):
+score    1 doc    6: http://cs50tse.cs.dartmouth.edu/tse/wikipedia/C_(programming_language).html
+Query: bruce or limburgs houston or encoded smtp
+Matches 1 documents (ranked):
+score    2 doc    7: http://cs50tse.cs.dartmouth.edu/tse/wikipedia/Computer_science.html
+Query: explained ford or has
+Matches 6 documents (ranked):
+score   28 doc    6: http://cs50tse.cs.dartmouth.edu/tse/wikipedia/C_(programming_language).html
+score   26 doc    4: http://cs50tse.cs.dartmouth.edu/tse/wikipedia/Dartmouth_College.html
+score   19 doc    3: http://cs50tse.cs.dartmouth.edu/tse/wikipedia/Hash_table.html
+score   17 doc    7: http://cs50tse.cs.dartmouth.edu/tse/wikipedia/Computer_science.html
+score   16 doc    2: http://cs50tse.cs.dartmouth.edu/tse/wikipedia/Linked_list.html
+score    8 doc    5: http://cs50tse.cs.dartmouth.edu/tse/wikipedia/Unix.html
+Query: timestamp affordable opposed or strung or faraday or foundation
+Matches 6 documents (ranked):
+score    5 doc    4: http://cs50tse.cs.dartmouth.edu/tse/wikipedia/Dartmouth_College.html
+score    2 doc    5: http://cs50tse.cs.dartmouth.edu/tse/wikipedia/Unix.html
+score    2 doc    7: http://cs50tse.cs.dartmouth.edu/tse/wikipedia/Computer_science.html
+score    1 doc    2: http://cs50tse.cs.dartmouth.edu/tse/wikipedia/Linked_list.html
+score    1 doc    3: http://cs50tse.cs.dartmouth.edu/tse/wikipedia/Hash_table.html
+score    1 doc    6: http://cs50tse.cs.dartmouth.edu/tse/wikipedia/C_(programming_language).html
+Query: interpreters or acm stem modules and templates or violations
+Matches 4 documents (ranked):
+score    3 doc    6: http://cs50tse.cs.dartmouth.edu/tse/wikipedia/C_(programming_language).html
+score    2 doc    5: http://cs50tse.cs.dartmouth.edu/tse/wikipedia/Unix.html
+score    1 doc    3: http://cs50tse.cs.dartmouth.edu/tse/wikipedia/Hash_table.html
+score    1 doc    7: http://cs50tse.cs.dartmouth.edu/tse/wikipedia/Computer_science.html
+all test cases ran correctly

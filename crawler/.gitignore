@@ -1,0 +1,7 @@
+*.o
+testdir
+index*
+crawler
+*.a
+wiki*
+toscrape
